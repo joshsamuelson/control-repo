@@ -7,7 +7,7 @@ class minecraft {
     source      => 'https://s3.amazonaws.com/Minecraft.Download/versions/1.12.2/minecraft_server.1.12.2.jar',
     destination => '/tmp',
     timeout     => 0,
-    verbose     => false,
+    verbose     => true,
   }
   package {'java':
     ensure => present,
