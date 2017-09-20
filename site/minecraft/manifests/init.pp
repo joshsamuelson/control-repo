@@ -9,4 +9,7 @@ class minecraft {
     timeout     => 0,
     verbose     => false,
   }
+  package {'java':
+    ensure => present,
+  }
 }
