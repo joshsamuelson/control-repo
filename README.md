@@ -1,3 +1,0 @@
-# control_repo
-
-test
