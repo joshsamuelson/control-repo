@@ -5,18 +5,14 @@ node puppet.linkedin.local {
   class { "r10k":
     remote => "https://github.com/samuelson/control_repo"
   }
-# Instead of running via mco, run r10k directly
-class {'r10k::webhook::config':
-  use_mcollective => false,
+class { 'r10k::webhook::config':
+  use_mcollective  => false,
+  public_key_path  => '/etc/mcollective/server_public.pem',  # Mandatory even when use_mcollective is false
+  private_key_path => '/etc/mcollective/server_private.pem', # Mandatory even when use_mcollective is false
 }
 
-# The hook needs to run as root when not running using mcollective
-# It will issue r10k deploy environment <branch_from_gitlab_payload> -p
-# When git pushes happen.
-class {'r10k::webhook':
-  use_mcollective => false,
-  user            => 'root',
-  group           => '0',
-  require         => Class['r10k::webhook::config'],
+class { 'r10k::webhook':
+  user    => 'root',                                       # Mandatory for FOSS
+  group   => 'root',                                       # Mandatory for FOSS
 }
 }
