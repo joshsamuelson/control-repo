@@ -5,6 +5,7 @@ node puppet.linkedin.local {
   class { "r10k":
     remote => "https://github.com/samuelson/control_repo"
   }
+  include r10k::mcollective
 class { 'r10k::webhook::config':
   use_mcollective  => false,
   public_key_path  => '/etc/mcollective/server_public.pem',  # Mandatory even when use_mcollective is false
