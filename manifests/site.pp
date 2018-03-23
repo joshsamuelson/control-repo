@@ -1,7 +1,7 @@
 node default {
 
 }
-node master {
+node puppet.linkedin.local {
   class { "r10k":
     remote => "https://github.com/samuelson/control_repo"
   }
