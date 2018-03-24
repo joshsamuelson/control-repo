@@ -1,15 +1,15 @@
 node default {
 
 }
-node puppet.linkedin.local {
+node puppet.local {
   class { "r10k":
     remote => "https://github.com/samuelson/control_repo"
   }
 
 class { 'r10k::webhook::config':
   use_mcollective  => false,
-  public_key_path  => '/etc/mcollective/server_public.pem',  # Mandatory even when use_mcollective is false
-  private_key_path => '/etc/mcollective/server_private.pem', # Mandatory even when use_mcollective is false
+  public_key_path  => '/etc/pupppetlabs/puppet/ssl/ca/ca_crt.pem', 
+  private_key_path => '/etc/puppetlabs/puppet/ssl/ca/ca_key.pem', 
 }
 
 class { 'r10k::webhook':
