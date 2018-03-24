@@ -1,0 +1,10 @@
+---   
+version: 5   
+   
+hierarchy:   
+    - name: "Per-node data"  # Human - readable name.   
+      path: "nodes/%{trusted.certname}.yaml"  
+    - name: "Per-OS defaults"   
+      path: "os/%{facts.os.family}.yaml"   
+    - name: "Common data"   
+      path: "common.yaml" 
