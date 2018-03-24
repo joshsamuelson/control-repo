@@ -1,0 +1,3 @@
+---
+profile::hiera_test::ssl: false
+profile::hiera_test::backups_enabled: true
