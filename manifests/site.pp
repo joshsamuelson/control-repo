@@ -8,8 +8,7 @@ node puppet.local {
 
 class { 'r10k::webhook::config':
   use_mcollective  => false,
-  public_key_path  => '/etc/puppetlabs/puppet/ssl/ca/ca_crt.pem', 
-  private_key_path => '/etc/puppetlabs/puppet/ssl/ca/ca_key.pem', 
+  enable_ssl => false,
 }
 
 class { 'r10k::webhook':
