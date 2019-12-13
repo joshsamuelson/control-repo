@@ -9,3 +9,5 @@ mod 'puppet-yum', '4.0.0'
 mod 'puppetlabs-yumrepo_core', '1.0.4'
 mod 'elastic-logstash', '6.1.5'
 mod 'puppetlabs-java', '6.0.0'
+mod 'joshsamuelson-elk',
+  :git => 'https://github.com/joshsamuelson/joshsamuelson-elk.git'
