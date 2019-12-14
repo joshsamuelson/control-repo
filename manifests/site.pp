@@ -1,6 +1,7 @@
 node puppet.local {
   include role::master
-}
-node elk.local {
-  include role::elk
+  file {'/etc/secret_password.txt':
+    ensure => file,
+    content => lookup('secret_password'),
+  }
 }
