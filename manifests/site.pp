@@ -1,12 +1,6 @@
-node default {
-  class {'r10k::webhook::config':
-  use_mcollective => false,
+node puppet.local {
+  include role::master
 }
-
-class {'r10k::webhook':
-  use_mcollective => false,
-  user            => 'root',
-  group           => '0',
-  require         => Class['r10k::webhook::config'],
-}
+node elk.local {
+  include role::elk
 }
