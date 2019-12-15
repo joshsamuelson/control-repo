@@ -10,3 +10,5 @@ mod 'elastic-elasticsearch', '6.4.0'
 mod 'richardc-datacat', '0.6.2'
 mod 'elastic-logstash', '6.1.5'
 mod 'puppetlabs-java', '6.0.0'
+mod 'joshsamuelson-elk',
+  :git => 'https://github.com/joshsamuelson/joshsamuelson-elk.git'
