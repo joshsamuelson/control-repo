@@ -12,3 +12,7 @@ mod 'elastic-logstash', '6.1.5'
 mod 'puppetlabs-java', '6.0.0'
 mod 'joshsamuelson-elk',
   :git => 'https://github.com/joshsamuelson/joshsamuelson-elk.git'
+mod 'puppetlabs-puppetdb', '7.4.0'
+mod 'puppetlabs-firewall', '2.2.0'
+mod 'puppetlabs-postgresql', '6.2.0'
+mod 'puppetlabs-inifile', '4.0.0'
